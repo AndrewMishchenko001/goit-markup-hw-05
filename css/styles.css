@@ -13,6 +13,7 @@
   --gradient-color: #c4c4c4;
 
   --card-set-gep: 30px;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Cтили для Index.html */
@@ -620,4 +621,41 @@ body {
   border-bottom: 1px solid var(--bordercard-grey);
   border-left: 1px solid var(--bordercard-grey);
   border-right: 1px solid var(--bordercard-grey);
+}
+
+.product-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.flex-element:hover .product-text {
+  transform: translateY(0);
+}
+.flex-element {
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.product-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 63px 24px;
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.03em;
+  line-height: 1.55;
 }
