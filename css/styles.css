@@ -110,6 +110,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms var(--timing-function);
 }
 
 .site-nav .link:hover,
@@ -163,6 +164,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms var(--timing-function);
 }
 
 .auth-nav .link:hover,
@@ -368,7 +370,10 @@ body {
   align-items: center;
   fill: currentColor;
   color: #afb1b8;
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
+
 .team-link:focus,
 .team-link:hover {
   background-color: var(--accent-color);
@@ -399,11 +404,15 @@ body {
   fill: currentColor;
   color: #afb1b8;
 }
+
 .client-link:focus,
 .client-link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
+  transition: color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
 }
+
 .client-item-icon + .client-item-icon {
   margin-left: 30px;
 }
@@ -422,6 +431,9 @@ body {
   border-radius: 4px;
   padding: 6px 22px;
   border: 1px solid transparent;
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 .button:focus,
 .button:hover {
@@ -521,7 +533,9 @@ body {
 .contacts-footer a:focus,
 .contacts-footer a:hover {
   color: var(--accent-color);
+  transition: color 250ms var(--timing-function);
 }
+
 .contacts-footer .link:not(:last-child) {
   margin-top: 0;
   margin-bottom: 9px;
@@ -536,7 +550,10 @@ body {
   align-items: center;
   fill: currentColor;
   color: var(--white-color);
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
+
 .footer-link:focus,
 .footer-link:hover {
   background-color: var(--accent-color);
@@ -612,6 +629,7 @@ body {
 .flex-element:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .product-content {
@@ -631,15 +649,12 @@ body {
 .flex-element:hover .product-text {
   transform: translateY(0);
 }
-.flex-element {
-  transition: box-shadow 250ms var(--timing-function);
-}
 
 .product-text {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
+  display: inline-block;
   width: 100%;
   height: 100%;
 
