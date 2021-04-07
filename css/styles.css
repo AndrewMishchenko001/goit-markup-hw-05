@@ -428,14 +428,14 @@ body {
   align-items: center;
   fill: currentColor;
   color: #afb1b8;
+  transition: color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
 }
 
 .client-link:focus,
 .client-link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
-  transition: color 250ms var(--timing-function),
-    border-color 250ms var(--timing-function);
 }
 
 .client-item-icon + .client-item-icon {
@@ -558,6 +558,8 @@ body {
 .contacts-footer a:focus,
 .contacts-footer a:hover {
   color: var(--accent-color);
+}
+.contacts-footer a {
   transition: color 250ms var(--timing-function);
 }
 
@@ -643,6 +645,7 @@ body {
   flex-basis: calc(100% / 3 - 1 * var(--card-set-gep));
   margin-right: var(--card-set-gep);
   margin-bottom: var(--card-set-gep);
+  transition: box-shadow 250ms var(--timing-function);
 }
 .flex-element:nth-child(3n) {
   margin-right: 0;
@@ -654,7 +657,6 @@ body {
 .flex-element:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms var(--timing-function);
 }
 
 .product-content {
