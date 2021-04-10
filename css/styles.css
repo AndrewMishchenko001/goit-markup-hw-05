@@ -201,21 +201,47 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+  opacity: 1;
 
   min-width: 528px;
   min-height: 581px;
 
   background-color: var(--background-white);
+}
+.modal-container {
+  position: relative;
+}
+.close-btn-modal {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--background-white);
+
+  background: url(../images/close_modal.svg) no-repeat center;
+  margin: 8px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .hero-title {
